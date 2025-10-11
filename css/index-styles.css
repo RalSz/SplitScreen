@@ -1,0 +1,82 @@
+h1 {
+    font-size: 2.5em;
+}
+
+.blurb {
+    margin-left: 1.4em;
+}
+
+#game-des-home {
+    display: grid;
+    width: 95%;
+    margin: 0 auto;
+    place-items: center;
+}
+
+.aspect-home:first-of-type {
+    margin-top: 0;
+}
+
+.aspect-home {
+    width: 90%;
+    margin: 1% auto;
+    border-radius: 35px;
+    padding: 1em;
+    background-color: #1C1B2D;
+}
+
+.aspect-icon {
+    width: 100%;
+}
+
+.aspect-home:nth-of-type(3n + 1) .aspect-name-home {
+    color: #EB6D9C;
+}
+.aspect-home:nth-of-type(3n + 2) .aspect-name-home, .aspect-home:last-of-type .aspect-name-home {
+    color: #74C9CA;
+}
+.aspect-home:nth-of-type(3n + 0) .aspect-name-home {
+    color: #F9E70A;
+}
+
+.aspect-name-home {
+    margin-left: 1em;
+    letter-spacing: 0.08em;
+}
+
+.aspect-desc-home {
+    margin-left: 1em;
+    margin-right: 3em;
+    color: #FBEFF2;
+    text-align: left;
+}
+
+@media screen and (min-width: 630px) {
+
+    #gd-home-title {
+        text-align: center;
+        font-size: 2em;
+    }
+
+    #game-des-home {
+        width: 70%;
+    }
+
+    footer {
+        padding-bottom: 0.5em;
+        color: #FBEFF2;
+    }
+}
+
+@media screen and (min-width: 1015px) {
+
+    #game-des-home {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        align-items: stretch;
+    }
+    .aspect-home:last-of-type {
+        grid-column: 2;
+    }
+
+}
