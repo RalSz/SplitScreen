@@ -6,6 +6,11 @@ h1 {
     margin-left: 1.4em;
 }
 
+#gd-home-title {
+    text-align: center;
+    font-size: 1.8em;
+}
+
 #game-des-home {
     display: grid;
     width: 95%;
@@ -52,12 +57,13 @@ h1 {
 }
 
 @media screen and (min-width: 630px) {
-
-    #gd-home-title {
-        text-align: center;
-        font-size: 2em;
+    #main-content h1 {
+        font-size: 4em;
     }
 
+    #gd-home-title {
+        font-size: 2.5em;
+    }
     #game-des-home {
         width: 70%;
     }
@@ -69,11 +75,20 @@ h1 {
 }
 
 @media screen and (min-width: 1015px) {
+    #main-content h1 {
+        font-size: 5em;
+    }
 
+    #gd-home-title {
+        font-size: 3em;
+    }
     #game-des-home {
         display: grid;
         grid-template-columns: repeat(3, auto);
         align-items: stretch;
+    }
+    .aspect-home {
+        width: 80%;
     }
     .aspect-home:last-of-type {
         grid-column: 2;

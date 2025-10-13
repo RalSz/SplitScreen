@@ -1,0 +1,43 @@
+h1#game-title {
+    font-family: "Inter", sans-serif;
+    font-size: 4.3em;
+}
+
+#ov-title {
+    font-size: 1.7em;
+}
+
+#game-ss {
+    width: 100%;
+}
+
+#ov-text p {
+    margin-top: 1.5em;
+}
+
+
+
+@media screen and (min-width: 630px) {
+    #game-title.tablet {
+        font-size: 5em;
+    }
+
+    #ov-title {
+        font-size: 2em;
+    }
+
+    #ov-text {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (min-width: 1015px) {
+    #main-content {
+        width: 85%;
+        margin: 0 auto;
+    }
+
+    #game-title.tablet {
+        font-size: 8em;
+    }
+}
