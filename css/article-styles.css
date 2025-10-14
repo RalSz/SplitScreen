@@ -102,4 +102,12 @@ h1#game-title {
         width: calc(85% / 2);
     }
 
+    .aspect-name-ga {
+        font-size: 2.2em;
+    }
+
+    .aspect-desc-ga {
+        font-size: 1.3em;
+    }
+
 }
