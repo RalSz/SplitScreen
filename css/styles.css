@@ -24,9 +24,8 @@ h1, h2, h3, h4, h5, h6 {
     color: transparent;
     -webkit-text-stroke: 1px #601886;
 }
-.stroke2 {
-    color: transparent;
-    -webkit-text-stroke: 2px #601886;
+.stroket {
+    filter: drop-shadow(1px 0 #601886) drop-shadow(-1px 0 #601886) drop-shadow(0 1px #601886) drop-shadow(0 -1px #601886);
 }
 .clearfix::after {
   content: "";
@@ -35,6 +34,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 a {
     text-decoration: none;
+}
+.quoted::before {
+    content: "“";
+}
+.quoted::after {
+    content: "”";
 }
 
 .mobile {
@@ -120,13 +125,8 @@ footer {
     .tablet {
         display: block;
     }
-    .stroke1t {
-        color: transparent;
-        -webkit-text-stroke: 1px #601886;
-    }
-    .stroke2t {
-        color: transparent;
-        -webkit-text-stroke: 2px #601886;
+    .stroket {
+        filter: drop-shadow(1px 0 #601886) drop-shadow(-1px 0 #601886) drop-shadow(0 1px #601886) drop-shadow(0 -1px #601886);
     }
     
     body {
@@ -176,6 +176,13 @@ footer {
 }
 
 @media screen and (min-width: 1015px) {
+    .stroket {
+        filter: drop-shadow(3px 0 #601886) drop-shadow(-3px 0 #601886) drop-shadow(0 3px #601886) drop-shadow(0 -3px #601886);
+    }
+    
+    header {
+        padding: 0.5em 0;
+    }
     header #site-logo a {
         height: clamp(1.3em, 6.3em, 12.5em);
     }
@@ -186,8 +193,12 @@ footer {
         margin-left: clamp(0.5rem, 1.1rem, 2.5rem);
         font-size: clamp(2.1em, 2.6em, 3.1em);
     }
-    nav li {
-        font-size: clamp(1.6em, 2.1em, 2.6em);
+    nav li:not(nav li:last-of-type) {
+        margin-right: 1em;
+    }
+    nav li a {
+        font-size: clamp(1em, 1.4em, 1.7em);
+        font-weight: 700;
     }
 
     #hero-image.tablet {

@@ -89,9 +89,13 @@ h1 {
     }
     .aspect-home {
         width: 80%;
+        transition: width 0.5s;
     }
     .aspect-home:last-of-type {
         grid-column: 2;
+    }
+    .aspect-home:hover {
+        width: 83%;
     }
 
 }

@@ -9,8 +9,12 @@ h1#game-title {
 
 #game-ss {
     width: 100%;
+    border-radius: 1em;
 }
-
+#ov-text {
+    width: 85%;
+    margin: 0 auto;
+}
 #ov-text p {
     margin-top: 1.5em;
 }
@@ -44,7 +48,7 @@ h1#game-title {
 
 .aspect-desc-ga {
     color: #FBEFF2;
-    text-align: justify;
+    /*text-align: justify;*/
 }
 
 #return-button {
@@ -76,6 +80,7 @@ h1#game-title {
     }
 
     #ov-text {
+        width: 80%;
         font-size: 1.1em;
     }
 
@@ -104,6 +109,10 @@ h1#game-title {
         font-size: 8em;
     }
 
+    #ov-text {
+        width: 60%;
+    }
+
     #game-des-ga {
         display: grid;
         grid-template-columns: auto auto;
@@ -114,9 +123,10 @@ h1#game-title {
         margin: 2em;
         border-radius: 3vw;
         padding: 3em;
-        justify-self: center; 
+        justify-self: center;
+        transition: padding 0.5s, width 0.5s, font-size 0.5s;
     }
-    #game-des-ga > :last-child {
+    .aspect-ga:last-of-type {
         grid-column: 1 / -1;
         width: calc(85% / 2);
     }
@@ -128,5 +138,24 @@ h1#game-title {
     .aspect-desc-ga {
         font-size: 1.3em;
     }
+    .aspect-ga:hover {
+        .aspect-name-ga {
+            font-size: 2.5em;
+        };
+        .aspect-desc-ga {
+            font-size: 1.4em;
+        };
+    }
 
+    .aspect-ga:hover:not(.aspect-ga:last-of-type) {
+        width: calc(75% + 2em);
+        padding: 2em;
+        #game-des-ga .aspect-ga:not(.aspect-ga:hover) {
+            padding: 0;
+        }
+    }
+    .aspect-ga:last-of-type:hover {
+        width: calc((85% / 2) + 2em);
+        padding: 2em;
+    }
 }

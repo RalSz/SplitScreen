@@ -1,0 +1,157 @@
+h1 {
+    text-align: center;
+}
+
+input[type="radio"] {
+    display: none;
+}
+#labels {
+    width: 90%;
+    margin: 1em auto;
+    text-align: center;
+}
+
+.tab-label {
+    display: inline-block;
+    cursor: pointer;
+    margin: 0.6em auto;
+    border-radius: 0.5em;
+    padding: 0.5em;
+    background-color: #EB6D9C;
+    font-family: "Komika Axis", sans-serif;
+    color: #1C1B2D;
+    font-size: 0.8em;
+}
+
+.tab-label:nth-of-type(4n+1) {
+    background-color: hsl(338, 63%, 75%);
+}
+.tab-label:nth-of-type(4n+3) {
+    background-color: hsl(55, 78%, 82%);
+}
+.tab-label:nth-of-type(even) {
+    background-color: hsl(182, 25%, 77%);
+}
+
+
+#aspect1:checked ~ #contents #content1,
+#aspect2:checked ~ #contents #content2,
+#aspect3:checked ~ #contents #content3,
+#aspect4:checked ~ #contents #content4,
+#aspect5:checked ~ #contents #content5,
+#aspect6:checked ~ #contents #content6,
+#aspect7:checked ~ #contents #content7 {
+    display: block;
+}
+
+#aspect1:checked ~ #labels label[for="aspect1"],
+#aspect5:checked ~ #labels label[for="aspect5"] {
+    border: 2px #601886 solid;
+    background-color: #EB6D9C;
+}
+#aspect3:checked ~ #labels label[for="aspect3"],
+#aspect7:checked ~ #labels label[for="aspect7"] {
+    border: 2px #601886 solid;
+    background-color: #F9E70A;
+}
+#aspect2:checked ~ #labels label[for="aspect2"],
+#aspect4:checked ~ #labels label[for="aspect4"],
+#aspect6:checked ~ #labels label[for="aspect6"] {
+    border: 2px #601886 solid;
+    background-color: #74C9CA;
+}
+
+#title, #subtitle {
+    text-align: center;
+    font-family: Inter, sans-serif;
+    color: #1C1B2D;
+}
+#title {
+    font-size: 2em;
+    font-weight: 900;
+}
+#subtitle {
+    font-size: 1em;
+}
+
+.tab-content {
+    display: none;
+    width: 95%;
+    margin: 1em auto 0 auto;
+}
+
+.content-title {
+    margin-bottom: 0.5em;
+    border-radius: 1em 1em 0 0;
+    background-color: #1C1B2D;
+    text-align: center;
+    color: #FBEFF2;
+    font-size: 2em;
+}
+
+/*
+.content-title {
+    margin-bottom: 0.5em;
+    border-radius: 1em 1em 0 0;
+    background-color: #1C1B2D;
+    text-align: center;
+    color: #FBEFF2;
+}*/
+
+.content-img {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.content-text {
+    width: 92%;
+    margin: 0.5em auto;
+    text-align: justify;
+}
+
+.content-end {
+    margin-top: 0.5em;
+    border-radius: 0 0 1em 1em;
+    background-color: #1C1B2D;
+}
+
+@media screen and (min-width: 630px) {
+    .tab-label {
+        font-size: 1em;
+    }
+
+    #subtitle {
+        font-size: 1.2em;
+    }
+
+    .tab-content {
+        width: 90%;
+    }
+
+    .content-img {
+        width: 78%;
+    }
+
+    .content-text {
+        width: 88%;
+    }
+}
+
+@media screen and (min-width: 1015px) {
+    .tab-content {
+        width: 70%;
+    }
+
+    .tab-label {
+        font-size: 1.2em;
+    }
+
+    .content-img {
+        width: 55%;
+    }
+
+    .content-text {
+        width: 65%;
+    }
+}
