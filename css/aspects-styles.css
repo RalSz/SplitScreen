@@ -40,7 +40,14 @@ input[type="radio"] {
 #aspect4:checked ~ #contents #content4,
 #aspect5:checked ~ #contents #content5,
 #aspect6:checked ~ #contents #content6,
-#aspect7:checked ~ #contents #content7 {
+#aspect7:checked ~ #contents #content7,
+#aspect1:checked ~ #aspects #as-tab-1,
+#aspect2:checked ~ #aspects #as-tab-2,
+#aspect3:checked ~ #aspects #as-tab-3,
+#aspect4:checked ~ #aspects #as-tab-4,
+#aspect5:checked ~ #aspects #as-tab-5,
+#aspect6:checked ~ #aspects #as-tab-6,
+#aspect7:checked ~ #aspects #as-tab-7 {
     display: block;
 }
 
@@ -59,6 +66,17 @@ input[type="radio"] {
 #aspect6:checked ~ #labels label[for="aspect6"] {
     border: 2px #601886 solid;
     background-color: #74C9CA;
+}
+
+.as-tab {
+    display: none;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+.as-tab-img {
+    width: 4em;
+    margin: 0 auto;
 }
 
 #title, #subtitle {
@@ -89,15 +107,6 @@ input[type="radio"] {
     font-size: 2em;
 }
 
-/*
-.content-title {
-    margin-bottom: 0.5em;
-    border-radius: 1em 1em 0 0;
-    background-color: #1C1B2D;
-    text-align: center;
-    color: #FBEFF2;
-}*/
-
 .content-img {
     display: block;
     width: 80%;
@@ -121,6 +130,10 @@ input[type="radio"] {
         font-size: 1em;
     }
 
+    .as-tab-img {
+        width: 6em;
+    }
+
     #subtitle {
         font-size: 1.2em;
     }
@@ -139,6 +152,9 @@ input[type="radio"] {
 }
 
 @media screen and (min-width: 1015px) {
+    .as-tab-img {
+        width: 8em;
+    }
     .tab-content {
         width: 70%;
     }
